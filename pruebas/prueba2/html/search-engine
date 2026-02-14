@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>search-engine</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+    <title>Search-engine</title>
 </head>
+
 <body>
-  
+    <p>Hello</p>
     <!--Logo here-->
     <img src="../img/ds_circle_logo.png" alt="ds_circle_logo">
 
@@ -18,6 +16,7 @@
     <!-- Press return to search-->
 
     <!-- Recent Posts-->
+
 </body>
 
 </html>
