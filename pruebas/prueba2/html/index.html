@@ -51,6 +51,105 @@
     .style-details-logo img{
       width: 100%;
     }
+
+    .dos-donts-wrapper{
+      margin-top: 75px;
+      margin-bottom: 75px;
+      display: grid;
+      grid-template-columns: 2fr 2fr 1fr;
+      grid-gap: 30px;
+    }
+
+    .dont-img-box {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .dont-img-box img{
+      width: 50%;
+    }
+
+    .dont-img-box div {
+      font-size: 14px;
+      color: #999999;
+    }
+
+    .dos-donts-heading {
+      font-weight: 900;
+      margin-bottom: 20px;
+      margin-left: 40px;
+    }
+
+    .blue-text {
+      color: #0079ff;
+    }
+    .red-text {
+      color: #dc0004;
+    }
+
+    .dos-donts-list li {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    .alternate-options-wrapper {
+      margin-top: 75px;
+      margin-bottom: 75px;
+    }
+
+    .alternate-options-wrapper h3 {
+      color: #999999;
+      font-size: 18px;
+      font-weight: 900;
+    }
+
+    .alternate-options-wrapper li {
+      margin-top: 30px;
+      margin-bottom: 30px;
+      font-size: 19px;
+    }
+
+    .alternate-options-img {
+      margin-top: 80px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      grid-gap: 100px 40px;
+    }
+
+    .images-logos {
+      width: 60%;
+    }
+
+    .text-logos {
+      width: 90%;
+    }
+
+    .additional-branding-details {
+      margin-top: 75px;
+      margin-bottom: 75px;
+    }
+
+    .additional-branding-details a {
+      color: #4fb8e8;
+      font-size: 18px;
+    }
+
+    .additional-branding-details p {
+      margin-bottom: 42px;
+    }
+
+    @media (max-width: 48em) {
+      .style-details, .dos-donts-wrapper {
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+      }
+
+      .style-details-text {
+        text-align: center;
+      }
+    }
   </style>
 </head>
 
@@ -66,29 +165,101 @@
 
       <div class="style-details">
 
-      <div class="style-details-text">
-        <h3>Primary Logo</h3>
-        <div>White Space = 1/4 logo width</div>
-        <div>White logo on Primary blue</div>
-        
-        <h3>Primary Color</h3>
-        <div>#0079FF</div>
-        <div>RGB 0, 121, 255</div>
+        <div class="style-details-text">
+          <h3>Primary Logo</h3>
+          <div>White Space = 1/4 logo width</div>
+          <div>White logo on Primary blue</div>
+          
+          <h3>Primary Color</h3>
+          <div>#0079FF</div>
+          <div>RGB 0, 121, 255</div>
 
-        <h3>Name</h3>
-        <div>Capitalize "D" and "S"</div>
-        <div>No space between the words</div>
+          <h3>Name</h3>
+          <div>Capitalize "D" and "S"</div>
+          <div>No space between the words</div>
+        </div>
+
+        <div class="style-details-logo">
+          <img src="../img/logo-with-margin.png" alt="logo-with-margin">
+        </div>
+        </div>
+
+      <div class="dos-donts-wrapper">
+
+        <div class="dos-donts-list">
+
+          <div class="dos-donts-heading blue-text">
+            Logo Do's
+          </div>
+
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+          </ul>
+        </div>
+
+        <div class="dos-donts-list">
+          <div class="dos-donts-heading red-text">
+            Logo Dont's
+          </div>
+
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+          </ul>
+        </div>
+
+        <div class="donts-img">
+          <div class="dont-img-box">
+            <img src="../img/dont_stretch.png" alt="dont_stretch">
+            <div>Stretch</div>
+          </div>
+
+          <div class="dont-img-box">
+            <img src="../img/dont_crop.png" alt="dont_crop">
+            <div>Crop</div>
+          </div>
+
+          <div class="dont-img-box">
+            <img src="../img/dont_color.png" alt="dont_color">
+            <div>Color</div>
+          </div>
+        </div>
       </div>
 
-      <div class="style-details-logo">
-        <img src="../img/logo-with-margin.png" alt="logo-with-margin">
+      <div class="alternate-options-wrapper">
+        <h3>Alternate Options</h3>
+
+        <ul>
+          <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis aspernatur architecto, quod dolor illo repellendus tempora.</li>
+          <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+        </ul>
+
+        <div class="alternate-options-img">
+          <img class="images-logos" src="/img/ds_circle_logo.png" alt="circle-logo">
+          <img class="images-logos" src="/img/ds_square_logo.png" alt="square-logo">
+          <img class="text-logos" src="/img/ds_icon_text_logo.png" alt="icon-text-logo">
+          <img class="text-logos" src="/img/ds_text_logo.png" alt="text-logo">
+        </div>
       </div>
 
-    </div>
-    </div>
+      <div class="additional-branding-details">
+        <h3>Asset Download</h3>
+        <p>
+          <a href="#">Download .zip file</a>
+        </p>
 
-    
-
+        <h3>Ussage</h3>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi ipsum voluptatum error voluptas quibusdam repellendus, quo excepturi aliquam voluptatem at recusandae fugit minima minus non dolor consequatur vero explicabo voluptates!
+        </p>
+      </div>
+    </div>
   </div>
 </body>
 
