@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <!--fontawesome-->
+        <script src="https://kit.fontawesome.com/337b79918c.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+
+    body {
+        margin: 0px;
+    }
+
+    .navbar {
+        background: #415068;
+    }
+
+    .navbar div {
+        display: none;
+    }
+
+    .navbar .hamburguesa,
+    .navbar .brand {
+        display: inline-block;
+    }
+
+    .navbar .link {
+        display: block;
+        text-align: center;
+        padding: 1em;
+        text-decoration: none;
+        background: #223047;
+        color: white;
+    }
+
+    .navbar .link:hover,
+    .navbar .link:active {
+        color: #223047;
+        background: white;
+    }
+
+    .navbar .brand {
+        width: 10em;
+        text-align: center;
+        padding: 1em;
+        color: white;
+    }
+
+    .navbar a {
+        text-decoration: none;
+    }
+
+    .navbar .hamburguesa {
+        padding: 1em;
+        color: black;
+    }
+
+    @media (min-width: 48em) {
+        .navbar {
+            display: flex;
+        }
+
+        .navbar .left,
+        .navbar .right {
+            display: flex;
+            flex: 1;
+        }
+
+        .navbar .link {
+            width: auto;
+        }
+
+        .navbar .right {
+            justify-content: flex-end;
+        }
+
+        .navbar .hamburguesa {
+            display: none;
+        }
+    }
+
+    @media (max-width: 48em) {
+        .navbar.active .hamburguesa {
+            background: #223047;
+            color: white;
+        }
+
+        .navbar .brand {
+            text-align: left;
+        }
+
+        .navbar.active div {
+            display: block;
+        }
+    }
+</style>
+
+<body>
+    <div class="navbar">
+        <a href="#" class="hamburguesa" id="hamburguesa">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+
+        <a href="#" class="brand">My Name</a>
+
+        <div class="left">
+            <a href="#" class="link">Link 1</a>
+            <a href="#" class="link">Link 2</a>
+        </div>
+
+        <div class="right">
+            <a href="#" class="link">Link 3</a>
+        </div>
+    </div>
+</body>
+
+<script>
+    const hamburguesa = document.querySelector('#hamburguesa');
+
+    hamburguesa.addEventListener('click', event => {
+        hamburguesa.parentElement.classList.toggle('active');
+    })
+</script>
+
+</html>

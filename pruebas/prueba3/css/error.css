@@ -1,0 +1,26 @@
+body {
+    background-color: lightgoldenrodyellow;
+    font-family: "Merriweather", serif;
+}
+
+.error-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.error-wrapper > .error-heading {
+    margin-bottom: 42px;
+}
+
+.error-wrapper > .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-wrapper > .img img{
+    width: 50%;
+}
