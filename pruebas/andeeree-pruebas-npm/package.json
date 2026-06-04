@@ -5,7 +5,7 @@
   "keywords": [
     "footer"
   ],
-  "homepage": "https://github.com/anderesor-star/pruebas/tree/main#readme",
+  "homepage": "https://www.npmjs.com/~andeeree",
   "bugs": {
     "url": "https://github.com/anderesor-star/pruebas/issues"
   },
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/anderesor-star/pruebas.git#main"
   },
   "license": "MIT",
-  "author": "andeeree <anderesor@gmail.com> (https://github.com/anderesor-star/pruebas/tree/main/pruebas/andeeree-pruebas-npm)",
+  "author": "andeeree <anderesor@gmail.com> (https://www.npmjs.com/~andeeree)",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
