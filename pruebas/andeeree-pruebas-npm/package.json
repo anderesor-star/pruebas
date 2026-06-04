@@ -1,0 +1,26 @@
+{
+  "name": "andeeree-pruebas-npm",
+  "version": "0.1.0",
+  "description": "This module allows for a dynamic footer to be generated for JS aplications with an updated year and name",
+  "keywords": [
+    "footer"
+  ],
+  "homepage": "https://github.com/anderesor-star/pruebas/tree/main#readme",
+  "bugs": {
+    "url": "https://github.com/anderesor-star/pruebas/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anderesor-star/pruebas.git#main"
+  },
+  "license": "MIT",
+  "author": "andeeree <anderesor@gmail.com> (https://github.com/anderesor-star/pruebas/tree/main/pruebas/andeeree-pruebas-npm)",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "moment": "^2.30.1"
+  }
+}
