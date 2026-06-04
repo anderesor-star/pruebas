@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Lodash Demo</title>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+  </head>
+  <body>
+  </body>
+
+  <script>
+
+    //Times
+    randNumber = () => {
+        return Math.round(Math.random() * 100)
+    }
+
+    const sampleNumbers = _.times(5, randNumber);
+
+    console.log(sampleNumbers);
+
+    //filter
+    const players = [
+        { name: 'Bregman, A',  battingAverage: 0.284 },
+        { name: 'Altuve, J',   battingAverage: 0.346 },
+        { name: 'Springer, G', battingAverage: 0.283 },
+        { name: 'Gurriel, Y',  battingAverage: 0.299 },
+        { name: 'Gonzalez, M', battingAverage: 0.303 }
+    ];
+
+    const over300 = _.filter(players, player => {
+        return player.battingAverage > 0.3
+    });
+
+    console.log(over300);
+
+    //keyBy
+    const roster = [
+        { position: '3B', name: 'Bregman, A',   hr: 2 },
+        { position: '2B', name: 'Altuve, J',    hr: 4 },
+        { position: 'CF', name: 'Springer, G',  hr: 8 },
+        { position: '1B', name: 'Gurriel, Y',   hr: 1 },
+        { position: 'LF', name: 'Gonzalez, M',  hr: 5 }
+    ]
+
+    const positions = _.keyBy(roster, 'position');
+
+    console.log(positions);
+
+    //reduce
+    const sum = _.reduce([1, 2, 3], function(total, num) {
+        return total + num;
+    }, 0);
+
+    const sum2 = _.reduce(roster, function(total, player) {
+        return total + player.hr;
+    }, 0);
+
+    console.log(sum);
+    console.log(sum2);
+
+    const links = [
+        "https://google.com",
+        "https://devcamp.com",
+        "https://airbnb.com"
+    ];
+
+    const webLinks = _.reduce(links, function (content, link) {
+        return `<a href= '${link}' > ${link} </a><br> `.concat(content);
+    }, "");
+
+    console.log(webLinks);
+
+    //random
+    randNumber2 = () => {
+        return _.random(1, 100);
+    };
+
+    const sample = _.times(5, randNumber2);
+
+    console.log(sample);
+
+    //errors
+    let request = new XMLHttpRequest();
+
+    request.open('GET', 'URL', true);
+
+    request.onload = function() {
+        if (request.status >= 200 && request.status <= 400) {
+            let data = JSON.parse(request.responseText);
+            console.log(data);
+        } else {
+
+        }
+    }
+
+    request.send();
+
+  </script>
+</html>
