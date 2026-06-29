@@ -1,9 +1,100 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Página-1" id="_5EAoH4uOqmVXKlCpPII">
-    <mxGraphModel>
+    <mxGraphModel dx="1094" dy="897" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="5M0wfWqndk_fuIVnHUAn-1" parent="1" style="html=1;whiteSpace=wrap;" value="Parser: parser" vertex="1">
+          <mxGeometry height="50" width="110" x="100" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5M0wfWqndk_fuIVnHUAn-2" parent="1" style="html=1;whiteSpace=wrap;" value="Parser: digit_lenght_validator" vertex="1">
+          <mxGeometry height="50" width="110" x="330" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5M0wfWqndk_fuIVnHUAn-3" parent="1" style="html=1;whiteSpace=wrap;" value="CountryCodes: country_code_validator" vertex="1">
+          <mxGeometry height="50" width="130" x="570" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5M0wfWqndk_fuIVnHUAn-4" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="460" width="20" x="145" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="5M0wfWqndk_fuIVnHUAn-5" edge="1" parent="1" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="5M0wfWqndk_fuIVnHUAn-4" value="Data to parse">
+          <mxGeometry relative="1" x="-0.0476" y="5" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="40" y="225" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5M0wfWqndk_fuIVnHUAn-7" edge="1" parent="1" source="5M0wfWqndk_fuIVnHUAn-4" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="5M0wfWqndk_fuIVnHUAn-1" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="170" y="200" as="sourcePoint" />
+            <mxPoint x="170" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5M0wfWqndk_fuIVnHUAn-8" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="80" width="20" x="375" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="5M0wfWqndk_fuIVnHUAn-9" edge="1" parent="1" source="5M0wfWqndk_fuIVnHUAn-4" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="5M0wfWqndk_fuIVnHUAn-8" value="Validate number length">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="275" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5M0wfWqndk_fuIVnHUAn-10" edge="1" parent="1" source="5M0wfWqndk_fuIVnHUAn-8" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" value="Return length validation">
+          <mxGeometry relative="1" x="0.0049" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="170" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5M0wfWqndk_fuIVnHUAn-11" edge="1" parent="1" source="5M0wfWqndk_fuIVnHUAn-8" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="384.5" y="220" as="sourcePoint" />
+            <mxPoint x="384.5" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5M0wfWqndk_fuIVnHUAn-12" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="80" width="20" x="625" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="5M0wfWqndk_fuIVnHUAn-13" edge="1" parent="1" source="5M0wfWqndk_fuIVnHUAn-4" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="5M0wfWqndk_fuIVnHUAn-12" value="Validate country code">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="415" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5M0wfWqndk_fuIVnHUAn-14" edge="1" parent="1" source="5M0wfWqndk_fuIVnHUAn-12" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" target="5M0wfWqndk_fuIVnHUAn-4" value="Result of code validation">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="550" y="485" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5M0wfWqndk_fuIVnHUAn-15" edge="1" parent="1" source="5M0wfWqndk_fuIVnHUAn-12" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="634.5" y="220" as="sourcePoint" />
+            <mxPoint x="634.5" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5M0wfWqndk_fuIVnHUAn-17" edge="1" parent="1" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" value="">
+          <mxGeometry relative="1" x="0.6667" y="20" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="195" y="280" />
+            </Array>
+            <mxPoint x="165" y="250" as="sourcePoint" />
+            <mxPoint x="165" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5M0wfWqndk_fuIVnHUAn-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); font-family: Montserrat, sans-serif; text-align: start; background-color: rgb(250, 250, 250);&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;returns parsed phone numbe&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-family: Montserrat, sans-serif; text-align: start; background-color: rgb(250, 250, 250);&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot;&gt;r&lt;/font&gt;&lt;/span&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="90" x="40" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="5M0wfWqndk_fuIVnHUAn-21" edge="1" parent="1" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="40" y="590" />
+            </Array>
+            <mxPoint x="140" y="590" as="sourcePoint" />
+            <mxPoint x="40" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5M0wfWqndk_fuIVnHUAn-23" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Delete all symbols except numbers" vertex="1">
+          <mxGeometry height="60" width="90" x="200" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="5M0wfWqndk_fuIVnHUAn-24" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="User" vertex="1">
+          <mxGeometry height="30" width="60" x="10" y="230" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
