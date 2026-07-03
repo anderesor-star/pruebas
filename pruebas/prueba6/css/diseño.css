@@ -1,0 +1,58 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.header-wrapper {
+    width: 100vw;
+}
+
+.header {
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+}
+
+.left-column {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.right-column {
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+    gap: 15px;
+}
+
+.ingredientes, .recetas, .herbolario {
+    display: inline-block;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.desplegable {
+    display: none;
+    position: absolute;
+    top: 50%;
+    z-index: 1000;
+    list-style: none;
+    list-style-type: none;
+    left: 0;
+    transform: none;
+    margin-top: none;
+    padding: 0px;
+}
+
+.ingredientes:hover .desplegable, .recetas:hover  .desplegable {
+    display: block;
+}
+
+.anadir-ingredientes {
+    margin: 100px 200px;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmética</title>
+
+    <link rel="stylesheet" href="../css/diseño.css">
+    <link rel="stylesheet" href="../js/data.js">
+    <link rel="stylesheet" href="../html/lista-ingredientes.html">
+
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="header">
+            <header id="header-dinamico"></header>
+        </div>
+
+        <div class="body wrapper">
+            <div class="anadir-ingredientes">
+                <div class="anadir">
+                    <div class="tituloNombre">
+                        <p>Añada el nombre del ingrediente:</p>
+                    </div>
+
+                    <div class="nombre">
+                        <input type="text" id="input-nombre" placeholder="Nombre">
+                        <button onclick="ejecutarAnadirNombre()">Añadir</button>
+                    </div>
+
+                    <div class="tituloPropiedades">
+                        <p>Añada las propiedades del ingrediente:</p>
+                    </div>
+
+                    <div class="propiedades">
+                        <input type="text" id="input-ingrediente-destino" placeholder="Nombre">
+                        <input type="text" id="input-propiedad" placeholder="Propiedad">
+                        <input type="text" id="input-valor" placeholder="Valor">
+                        <button onclick="ejecutarAnadirPropiedades()">Añadir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="../js/data.js">
+
+    fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header-dinamico').innerHTML = data;
+    })
+    .catch(error => console.error('Error al cargar el header:', error));
+
+</script>
+</html>

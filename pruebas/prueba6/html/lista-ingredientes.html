@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista-ingredientes</title>
+
+    <link rel="stylesheet" href="../css/diseño.css">
+    <link rel="stylesheet" href="../js/data.js">
+
+</head>
+<body>
+    <div class="wrapper">
+
+        <div class="header">
+            <header id="header-dinamico"></header>
+        </div>
+
+        <div class="body-wrapper">
+            <div id="contenedor-bloques" class="grid-ingredientes">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="../js/data.js">
+    fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('header-dinamico').innerHTML = data;
+    })
+    .catch(error => console.error('Error al cargar el header:', error));
+</script>
+</html>
