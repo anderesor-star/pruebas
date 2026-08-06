@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from 'axios';
 
 import PortfolioItem from "./portfolio-item";
 
@@ -11,11 +12,7 @@ export default class PortfolioContainer extends Component {
             pageTitle: "Welcome to my portfolio",
             isLoading: false,
             filter: "ALL",
-            data: [
-                {title:"google", category: "online"},
-                {title:"upna", category: "in-person"},
-                {title:"upv", category: "in-person"}
-            ]
+            data: []
         };
 
         this.handlePageTitleUpdate = this.handlePageTitleUpdate.bind(this);
@@ -26,6 +23,19 @@ export default class PortfolioContainer extends Component {
         this.setState({filter:filter});
     }
 
+    getPortfolioItems(){
+        axios
+            .get("https://anderesordo.devcamp.space/portfolio/portfolio_items")
+            .then(response => {
+                this.setState({
+                    data: response.data.portfolio_items
+                });
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
+
     portfolioItems() {
         const { data, filter } = this.state;
         const filteredData = filter === "ALL" 
@@ -33,7 +43,7 @@ export default class PortfolioContainer extends Component {
             : data.filter(item => item.category === filter);
 
         return filteredData.map(item => (
-            <PortfolioItem key={item.title} title={item.title} />
+            <PortfolioItem key={item.id} title={item.name} url={item.url} slug={item.id}/>
         ));
     }
 
@@ -41,6 +51,10 @@ export default class PortfolioContainer extends Component {
         this.setState({
             pageTitle: "Something else"
         });
+    }
+
+    componentDidMount(){
+        this.getPortfolioItems();
     }
 
     render() {
