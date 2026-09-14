@@ -43,7 +43,7 @@ export default class PortfolioContainer extends Component {
             : data.filter(item => item.category === filter);
 
         return filteredData.map(item => (
-            <PortfolioItem key={item.id} title={item.name} url={item.url} slug={item.id}/>
+            <PortfolioItem key={item.id} item={item}/>
         ));
     }
 
@@ -64,18 +64,13 @@ export default class PortfolioContainer extends Component {
 
         return(
             <div>
-                <h2>{this.state.pageTitle}</h2>
+                <div className="portfolio-items-wrapper">
+                    <button className="btn" onClick={() => this.handleFilter("online")}>Online</button>
+                    <button className="btn" onClick={() => this.handleFilter("in-person")}>In-person</button>
+                    <button className="btn" onClick={() => this.handleFilter("ALL")}>Reset</button>
 
-                {this.portfolioItems()}
-
-                <hr/>
-
-                <button onClick={() => this.handleFilter("online")}>Online</button>
-                <button onClick={() => this.handleFilter("in-person")}>In-person</button>
-                <button onClick={() => this.handleFilter("ALL")}>Reset</button>
-
-
-                <button onClick={this.handlePageTitleUpdate}>Change Title</button>
+                    {this.portfolioItems()}
+                </div>
             </div>
         )
     }
