@@ -11,6 +11,7 @@ import home from './pages/home';
 import about from './pages/about';
 import contact from './pages/contact';
 import blog from './pages/blog';
+import portfolioManager from './pages/portfolio-manager';
 import portfolioDetail from './portfolio/portfolio-detail';
 import Auth from './pages/auth';
 import noMatch from './pages/no-match';
@@ -75,7 +76,7 @@ export default class App extends Component {
 
     authorizedPages() {
         return [ 
-            <Route exact path="/blog" component={blog}></Route>
+            <Route key={"portfolio-manager"} exact path="/portfolio-manager" component={portfolioManager} />
         ]
     }
 
@@ -89,8 +90,6 @@ export default class App extends Component {
                         handleSuccessfulLogOut = {this.handleSuccessfulLogOut}
                     />
 
-                    <h2>{this.state.loggedInStatus}</h2>
-
                     <Switch>
                         <Route exact path="/" component={home}></Route>
                         <Route 
@@ -103,13 +102,15 @@ export default class App extends Component {
                              />
                         )}
                          />
-                        <Route exact path="/about-me" component={about}></Route>
-                        <Route exact path="/contact" component={contact}></Route>
+                        <Route exact path="/about-me" component={about} />
+                        <Route exact path="/contact" component={contact} />
+                        <Route exact path="/blog" component={blog} />
                         {this.state.loggedInStatus === "LOGGED_IN" ? (
                             this.authorizedPages()
-                        ): null};
-                        <Route exact path="/portfolio/:slug" component={portfolioDetail}></Route>
-                        <Route component={noMatch}></Route>
+                        ): null}
+                        
+                        <Route exact path="/portfolio/:slug" component={portfolioDetail} />
+                        <Route component={noMatch} />
                     </Switch>
                 </div>
             </Router>
