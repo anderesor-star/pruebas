@@ -5,6 +5,10 @@ import {
     Route
 } from 'react-router-dom';
 import axios from 'axios';
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {FortAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faTrash, faSignOutAlt} from '@fortawesome/free-solid-svg-icons';
+
 
 import NavigationContainer from './navigation/navigation-container';
 import home from './pages/home';
@@ -15,6 +19,8 @@ import portfolioManager from './pages/portfolio-manager';
 import portfolioDetail from './portfolio/portfolio-detail';
 import Auth from './pages/auth';
 import noMatch from './pages/no-match';
+
+library.add(faTrash, faSignOutAlt);
 
 export default class App extends Component {
     constructor (props) {
