@@ -5,26 +5,26 @@ import {
     Route
 } from 'react-router-dom';
 import axios from 'axios';
-import {library} from '@fortawesome/fontawesome-svg-core';
 import {FortAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faTrash, faSignOutAlt, faEdit} from '@fortawesome/free-solid-svg-icons';
-
 
 import NavigationContainer from './navigation/navigation-container';
 import home from './pages/home';
 import about from './pages/about';
 import contact from './pages/contact';
 import blog from './pages/blog';
+import BlogDetail from './pages/blog-detail';
 import portfolioManager from './pages/portfolio-manager';
 import portfolioDetail from './portfolio/portfolio-detail';
 import Auth from './pages/auth';
 import noMatch from './pages/no-match';
-
-library.add(faTrash, faSignOutAlt, faEdit);
+import Blog from './pages/blog';
+import Icons from './helpers/icon';
 
 export default class App extends Component {
     constructor (props) {
         super(props);
+
+        Icons();
 
         this.state = {
             loggedInStatus: "NOT_LOGGED_IN"
@@ -110,7 +110,12 @@ export default class App extends Component {
                          />
                         <Route exact path="/about-me" component={about} />
                         <Route exact path="/contact" component={contact} />
-                        <Route exact path="/blog" component={blog} />
+                        <Route exact path="/blog" 
+                            render={props => (
+                                <Blog {...props} loggedInStatus={this.state.loggedInStatus} />
+                            )}
+                        />
+                        <Route exact path="/b/:slug" component={BlogDetail} />
                         {this.state.loggedInStatus === "LOGGED_IN" ? (
                             this.authorizedPages()
                         ): null}
