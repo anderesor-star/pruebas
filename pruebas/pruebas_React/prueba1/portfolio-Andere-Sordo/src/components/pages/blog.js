@@ -32,20 +32,16 @@ class Blog extends Component {
         });
     }
 
-    onScroll(event) {
-        if (this.state.isLoading || 
-            (this.state.totalCount > 0 && this.state.blogItems.length >= this.state.totalCount)) {
-        return;
+    onScroll() {
+        if (this.state.isLoading || this.state.totalCount > 0 && this.state.blogItems.length >= this.state.totalCount) {
+            return;
         };
 
-        const target = event.target;
-        const scrollTop = target.scrollTop !== undefined ? target.scrollTop : (document.documentElement.scrollTop || document.body.scrollTop);
-        const scrollHeight = target.scrollHeight !== undefined ? target.scrollHeight : document.documentElement.scrollHeight;
-        const clientHeight = target.clientHeight !== undefined ? target.clientHeight : window.innerHeight;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-        console.log("Scroll activo:", scrollTop + clientHeight, "vs Total:", scrollHeight);
-
-        if (scrollHeight - (scrollTop + clientHeight) < 100) {
+        if (windowHeight + scrollTop >= documentHeight - 200) {
             this.getBlogItems();
         }
     }
@@ -76,7 +72,7 @@ class Blog extends Component {
             console.log("getting page:", nextPage, response);
 
             const blogs = response.data.portfolio_blogs || [];
-            const total = (response.data.meta && response.data.meta.total_records) ? response.data.meta.total_records : 999;
+            const total = response.data.meta && response.data.meta.total_records ? response.data.meta.total_records : 0;
 
             this.setState({
                 blogItems: this.state.blogItems.concat(blogs),
@@ -104,7 +100,7 @@ class Blog extends Component {
             return <BlogItem key={`${blogItem.id}-${index}`} blogItem={blogItem} />;
         });
         return(
-        <div className="blog-container" onScroll={this.onScroll}>
+        <div className="blog-container">
             <BlogModal 
                 handleSuccessfullNewBlogSubmission= {this.handleSuccessfullNewBlogSubmission}
                 handleModalClose= {this.handleModalClose}
