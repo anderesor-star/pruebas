@@ -4,7 +4,10 @@
     padding: 30px;
 
     .right-column {
-        a {
+        display: flex;
+        justify-content: space-between;
+
+        a, svg {
             margin-left: 15px;
             cursor: pointer;
             color: $teal;
