@@ -6,7 +6,9 @@ const PortfolioSidebarList = (props) => {
         return(
             <div key={portfolioItem.id} className="portfolio-item-thumb">
                 <div className="portfolio-thumb-img">
-                    <img src={portfolioItem.thumb_image_url} />
+                    {portfolioItem.thumb_image_url && (
+                        <img src={portfolioItem.thumb_image_url} alt={portfolioItem.name} />
+                    )}
                 </div>
 
                 <div className="text-content">
