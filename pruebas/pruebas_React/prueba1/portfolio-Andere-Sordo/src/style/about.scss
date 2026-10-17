@@ -1,0 +1,14 @@
+.about-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: calc(100vh - 82.67px);
+    width: 100%;
+
+    .right-column-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 100px;
+    }
+}

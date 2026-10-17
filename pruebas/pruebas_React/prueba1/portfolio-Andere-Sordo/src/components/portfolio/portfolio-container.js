@@ -20,16 +20,28 @@ export default class PortfolioContainer extends Component {
     }
 
     handleFilter(filter) {
-        this.setState({filter:filter});
+        if (filter === "ALL") {
+            this.getPortfolioItems();
+        } else {
+            this.getPortfolioItems(filter);
+        };
     }
 
-    getPortfolioItems(){
+    getPortfolioItems(filter = null){
         axios
             .get("https://anderesordo.devcamp.space/portfolio/portfolio_items")
             .then(response => {
-                this.setState({
-                    data: response.data.portfolio_items
-                });
+                if (filter) {
+                    this.setState({
+                        data: response.data.portfolio_items.filter(item => {
+                        return item.category === filter;
+                        })
+                    });
+                } else {
+                    this.setState({
+                        data: response.data.portfolio_items
+                    });
+                }
             })
             .catch(error => {
                 console.log(error);
@@ -63,12 +75,14 @@ export default class PortfolioContainer extends Component {
         }
 
         return(
-            <div>
-                <div className="portfolio-items-wrapper">
-                    <button className="btn" onClick={() => this.handleFilter("online")}>Online</button>
-                    <button className="btn" onClick={() => this.handleFilter("in-person")}>In-person</button>
+            <div className="homepage-wrapper">
+                <div className="filter-links">
+                    <button className="btn" onClick={() => this.handleFilter("prueba1")}>Prueba1</button>
+                    <button className="btn" onClick={() => this.handleFilter("prueba2")}>Prueba2</button>
+                    <button className="btn" onClick={() => this.handleFilter("prueba3")}>Prueba3</button>
                     <button className="btn" onClick={() => this.handleFilter("ALL")}>Reset</button>
-
+                </div>
+                <div className="portfolio-items-wrapper">
                     {this.portfolioItems()}
                 </div>
             </div>

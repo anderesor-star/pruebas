@@ -1,0 +1,27 @@
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: calc(100vh - 82.67px);
+    width: 100%;
+
+    .right-column-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 100px;
+
+        .mail, .phone, .insta, .ubi {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8em;
+
+            & svg {
+                font-size: 1.8em;
+                color: $dark-teal;
+            }
+        }
+    }
+}

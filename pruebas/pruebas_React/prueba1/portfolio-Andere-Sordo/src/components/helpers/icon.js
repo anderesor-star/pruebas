@@ -3,12 +3,28 @@ import {
     faSignOutAlt, 
     faEdit, 
     faHurricane, 
-    faFileCirclePlus
+    faFileCirclePlus,
+    faEnvelope,
+    faPhoneVolume,
+    faHashtag,
+    faLocationDot,
+    faUserLock
 } from '@fortawesome/free-solid-svg-icons';
 import {library} from '@fortawesome/fontawesome-svg-core';
 
 const Icons = () => {
-    return (library.add(faTrash, faSignOutAlt, faEdit, faHurricane, faFileCirclePlus));
+    return (library.add(
+        faTrash, 
+        faSignOutAlt, 
+        faEdit, 
+        faHurricane, 
+        faFileCirclePlus, 
+        faEnvelope,
+        faPhoneVolume,
+        faHashtag,
+        faLocationDot,
+        faUserLock
+    ));
 };
 
 export default Icons;
