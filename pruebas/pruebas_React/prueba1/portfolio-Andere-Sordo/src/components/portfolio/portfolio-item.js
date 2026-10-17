@@ -28,15 +28,15 @@ export default class PortfolioItem extends Component {
                 onMouseLeave={() => this.handleMouseLeave()}>
                     <div 
                         className={"portfolio-img-background " + this.state.portfolioItemClass}
-                        style={{
-                            backgroundImage: "url(" + thumb_image_url + ")"
-                        }}
+                        style={thumb_image_url ? { 
+                            backgroundImage: `url(${thumb_image_url})` 
+                        } : {}}
                     />
 
 
                     <div className="img-text-wrapper">
                         <div className="logo-wrapper">
-                            <img src={logo_url} />
+                            {logo_url && <img src={logo_url} alt="Logo" />}
                         </div>
 
                         <div className="subtitle">{description}</div>
