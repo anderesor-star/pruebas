@@ -44,7 +44,11 @@ const NavigationContainer = props => {
                     <a onClick={handleSignOut}>
                         <FontAwesomeIcon icon={"sign-out-alt"} />
                     </a>
-                ): null}
+                ): (
+                    <NavLink to= "/auth" activeClassName="nav-link-active">
+                        <FontAwesomeIcon icon={"circle-user"} />
+                    </NavLink>
+                )}
             </div>
 
         </div>
